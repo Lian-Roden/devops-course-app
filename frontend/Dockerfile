@@ -12,7 +12,7 @@ RUN dos2unix  /react-ui/src/deployment/env-uri-init.sh
 RUN npm run build
 
 
-FROM nginx:alpine
+FROM nginx:1.25.3-alpine3.18
 ## Remove default nginx index page
 RUN rm -rf /usr/share/nginx/html/*
 # Copy from the stahg 1
